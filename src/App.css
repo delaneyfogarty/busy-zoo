@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+
+.fight {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.emoji {
+  padding: 50px;
+  transition: all 0.4 ease-in-out;
+}
+
+.fighter {
+  display: block;
+}
+
+.button {
+  display: block;
+  position: absolute;
+}
