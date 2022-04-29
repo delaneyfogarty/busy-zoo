@@ -65,7 +65,7 @@ function App() {
         <button onClick={handleOpenFestival}>Open Zoo</button>
         <button onClick={handleClosedFestival}>Close Zoo</button>
       </div>
-      <MidsummerParade members={members} />
+      <MidsummerParade className="members" members={members} />
       <div className="parade-buttons">
         <button onClick={handleFlowerGirl}>Flower Girl</button>
         <button onClick={handleBear}>Bear</button>
