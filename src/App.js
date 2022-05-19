@@ -4,6 +4,7 @@ import { useState } from 'react';
 import FlowerGirlBearFight from './FlowerGirlBearFight.js';
 import OpenClosedSign from './OpenClosedSign.js';
 import MidsummerParade from './MidsummerParade.js';
+import CustomButton from './CustomButton';
 
 function App() {
   const ATTACK_MODIFIER = 0.5;
@@ -51,27 +52,31 @@ function App() {
     <div className="App">
       <FlowerGirlBearFight className="fight" flowerGirlSize={flowerGirlSize} bearSize={bearSize} />
       <div className="fight-buttons">
-        <button onClick={() => setFlowerGirlSize(flowerGirlSize + ATTACK_MODIFIER)}>
+        <CustomButton onClick={() => setFlowerGirlSize(flowerGirlSize + ATTACK_MODIFIER)}>
           Drink Mushroom Tea
-        </button>
-        <button onClick={() => setBearSize(bearSize - ATTACK_MODIFIER)}>Attack the bear!</button>
-        <button onClick={() => setBearSize(bearSize + ATTACK_MODIFIER)}>Eat Some Berries</button>
-        <button onClick={() => setFlowerGirlSize(flowerGirlSize - ATTACK_MODIFIER)}>
+        </CustomButton>
+        <CustomButton onClick={() => setBearSize(bearSize - ATTACK_MODIFIER)}>
+          Attack the bear!
+        </CustomButton>
+        <CustomButton onClick={() => setBearSize(bearSize + ATTACK_MODIFIER)}>
+          Eat Some Berries
+        </CustomButton>
+        <CustomButton onClick={() => setFlowerGirlSize(flowerGirlSize - ATTACK_MODIFIER)}>
           Roar at Flower Girl!
-        </button>
+        </CustomButton>
       </div>
       <OpenClosedSign isOpen={isOpen} />
       <div className="buttons">
-        <button onClick={handleOpenFestival}>Open Zoo</button>
-        <button onClick={handleClosedFestival}>Close Zoo</button>
+        <CustomButton onClick={handleOpenFestival}>Open Zoo</CustomButton>
+        <CustomButton onClick={handleClosedFestival}>Close Zoo</CustomButton>
       </div>
       <MidsummerParade className="members" members={members} />
       <div className="parade-buttons">
-        <button onClick={handleFlowerGirl}>Flower Girl</button>
-        <button onClick={handleBear}>Bear</button>
-        <button onClick={handleFairy}>Fairy</button>
-        <button onClick={handleMermaid}>Mermaid</button>
-        <button onClick={handleRemove}>Remove A Parade Member</button>
+        <CustomButton onClick={handleFlowerGirl}>Flower Girl</CustomButton>
+        <CustomButton onClick={handleBear}>Bear</CustomButton>
+        <CustomButton onClick={handleFairy}>Fairy</CustomButton>
+        <CustomButton onClick={handleMermaid}>Mermaid</CustomButton>
+        <CustomButton onClick={handleRemove}>Remove A Parade Member</CustomButton>
       </div>
     </div>
   );
