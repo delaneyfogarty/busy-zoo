@@ -1,8 +1,21 @@
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('when I click Add Fairy, there is one fairy added to the parade', () => {
   render(<App />);
-  const linkElement = screen.getByText(/Mushroom Tea/i);
-  expect(linkElement).toBeInTheDocument();
+  const initialFairies = 0;
+  const addFairyButton = screen.getByText(/Add Fairy/i);
+  fireEvent.click(addFairyButton);
+  const fairyEmojisAfterClick = screen.queryAllByText(/🧚‍♀️/i);
+  expect(fairyEmojisAfterClick.length).toBe(initialFairies + 1);
+});
+
+test('when I click Open Festival, the prompt changes to Welcome to Midsummer Festival', () => {
+  render(<App />);
+  const initialFestivalPrompt = 'Summer Solstice has passed. See you next year!';
+  const openFestivalButton = screen.getByText(/Open Festival/i);
+  // expect(initialFestivalPrompt).toBeInTheDocument();
+  fireEvent.click(openFestivalButton);
+  const promptAfterOpeningFestival = screen.getByText(/Welcome to the Midsummer Festival!/i);
+  expect(initialFestivalPrompt).toBe(promptAfterOpeningFestival);
 });

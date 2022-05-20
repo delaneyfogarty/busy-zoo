@@ -72,10 +72,10 @@ function Zoo() {
       </div>
       <MidsummerParade className="members" members={members} />
       <div className="parade-buttons">
-        <CustomButton onClick={handleFlowerGirl}>Flower Girl</CustomButton>
-        <CustomButton onClick={handleBear}>Bear</CustomButton>
-        <CustomButton onClick={handleFairy}>Fairy</CustomButton>
-        <CustomButton onClick={handleMermaid}>Mermaid</CustomButton>
+        <CustomButton onClick={handleFlowerGirl}>Add Flower Girl</CustomButton>
+        <CustomButton onClick={handleBear}>Add Bear</CustomButton>
+        <CustomButton onClick={handleFairy}>Add Fairy</CustomButton>
+        <CustomButton onClick={handleMermaid}>Add Mermaid</CustomButton>
         <CustomButton onClick={handleRemove}>Remove A Parade Member</CustomButton>
       </div>
     </div>
