@@ -1,9 +1,9 @@
 import React from 'react';
-import ToggleButton from '@mui/material/ToggleButton';
+import Button from '@mui/material/Button';
 
 export default function CustomButton({ onClick, children }) {
   return (
-    <ToggleButton
+    <Button
       onClick={onClick}
       variant="contained"
       sx={{
@@ -12,6 +12,6 @@ export default function CustomButton({ onClick, children }) {
       }}
     >
       {children}
-    </ToggleButton>
+    </Button>
   );
 }

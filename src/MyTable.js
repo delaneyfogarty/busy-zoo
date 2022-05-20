@@ -4,7 +4,7 @@ import { people } from './data.js';
 
 export default function MyTable() {
   return (
-    <div style={{ maxWidth: '100%' }}>
+    <div style={{ maxWidth: '80%' }}>
       <MaterialTable
         columns={[
           { title: 'Id', field: 'id' },

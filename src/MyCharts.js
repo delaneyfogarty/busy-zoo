@@ -8,10 +8,10 @@ export default function MyCharts() {
         <VictoryBar
           width={500}
           data={[
-            { quarter: 1, earnings: 50000 },
-            { quarter: 2, earnings: 16500 },
-            { quarter: 3, earnings: 14250 },
-            { quarter: 4, earnings: 19000 },
+            { quarter: 1, earnings: 20201 },
+            { quarter: 2, earnings: 77771 },
+            { quarter: 3, earnings: 54567 },
+            { quarter: 4, earnings: 20202 },
           ]}
           x="quarter"
           y="earnings"
