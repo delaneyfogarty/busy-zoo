@@ -12,10 +12,8 @@ test('when I click Add Fairy, there is one fairy added to the parade', () => {
 
 test('when I click Open Festival, the prompt changes to Welcome to Midsummer Festival', () => {
   render(<App />);
-  const initialFestivalPrompt = 'Summer Solstice has passed. See you next year!';
   const openFestivalButton = screen.getByText(/Open Festival/i);
-  // expect(initialFestivalPrompt).toBeInTheDocument();
   fireEvent.click(openFestivalButton);
   const promptAfterOpeningFestival = screen.getByText(/Welcome to the Midsummer Festival!/i);
-  expect(initialFestivalPrompt).toBe(promptAfterOpeningFestival);
+  expect(promptAfterOpeningFestival).toBeInTheDocument();
 });
